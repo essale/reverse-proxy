@@ -9,8 +9,8 @@ zuul:
       path: /**
       # This config forward all headers
       sensitiveHeaders:
-      url: http://localhost:8080/pm
+      url: ${URL:http://localhost:8080}
 
 
 server:
-  port: 8081
+  port: ${PORT:8081}
