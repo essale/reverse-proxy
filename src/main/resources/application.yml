@@ -1,0 +1,16 @@
+zuul:
+  host:
+    connect-timeout-millis: 120000
+    socket-timeout-millis: 120000
+  # This config remove the X-Forwarded-Prefix
+  # addProxyHeaders: false
+  routes:
+    any:
+      path: /**
+      # This config forward all headers
+      sensitiveHeaders:
+      url: http://localhost:8080/pm
+
+
+server:
+  port: 8081
