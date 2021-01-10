@@ -10,6 +10,6 @@ docker run \
   -e KEY_STORE_PATH=<this is the keystore path> \
   -e KEY_STORE_PASS=<this is the keystore pass> \
   -e KEY_STORE_TYPE=<default: JKS> \
-  -e PORT=8081 \
-  -p 8081:8081 \
+  -e PORT=8443 \
+  -p 8443:8443 \
   itayess/reverse-proxy
