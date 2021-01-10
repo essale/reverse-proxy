@@ -9,8 +9,16 @@ zuul:
       path: /**
       # This config forward all headers
       sensitiveHeaders:
-      url: ${URL:http://localhost:8080}
+      url: ${URL:https://localhost:8080}
 
+
+security:
+  require-ssl: true
 
 server:
-  port: ${PORT:8081}
+  port: ${PORT:8443}
+  ssl:
+    enabled: true
+    key-store: ${KEY_STORE_PATH:keystore.jks}
+    key-store-password: ${KEY_STORE_PASS:123456}
+    keyStoreType: ${KEY_STORE_TYPE:JKS}
