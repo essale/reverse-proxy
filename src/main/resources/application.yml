@@ -1,7 +1,7 @@
 zuul:
   host:
-    connect-timeout-millis: 120000
-    socket-timeout-millis: 120000
+    connect-timeout-millis: 400000
+    socket-timeout-millis: 400000
   # This config remove the X-Forwarded-Prefix
   # addProxyHeaders: false
   routes:
