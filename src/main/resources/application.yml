@@ -17,7 +17,7 @@ zuul:
 
 
 security:
-  require-ssl: true
+  require-ssl: ${REQUIRE_SSL:true}
 
 server:
   port: ${PORT:8443}
