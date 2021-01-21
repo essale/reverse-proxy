@@ -26,4 +26,6 @@ server:
     key-store: ${KEY_STORE_PATH:/keystore/keystore.jks}
     key-store-password: ${KEY_STORE_PASS:123456}
     keyStoreType: ${KEY_STORE_TYPE:PKCS12}
-    #key-alias: ${KEY_STORE_ALIAS:boundle}
+#    key-alias: ${KEY_STORE_ALIAS:boundle}
+
+debug: ${ENABLE_DEBUG:true}

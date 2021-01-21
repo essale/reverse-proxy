@@ -7,3 +7,20 @@ A forward proxy, often called a proxy, proxy server, or web proxy, is a server t
 * Advance ZUUL configurations [Link to advance zuul guide](https://dzone.com/articles/dynamic-routing-through-zuul-with-rest-api-spring)
 ## Docs
 [Support Https](https://medium.com/@iroshan.du/ssl-configure-in-zuul-in-spring-boot-micro-services-for-localhost-3b933504277f)
+
+
+
+```
+docker run \
+  --name reverse-proxy \
+  -d \
+  --restart always  \
+  -e URL=<url here> \
+  -v <path on server where keystore located>:/keystore \
+  -e KEY_STORE_PATH=<this is the keystore path> \
+  -e KEY_STORE_PASS=<this is the keystore pass> \
+  -e KEY_STORE_TYPE=<default: JKS> \
+  -e PORT=8443 \
+  -p 8443:8443 \
+  itayess/reverse-proxy
+```
